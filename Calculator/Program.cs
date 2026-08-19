@@ -1,6 +1,4 @@
-﻿
-using System.ComponentModel;
-using Calculator.Handlers;
+﻿using Calculator.Handlers;
 
 namespace Calculator;
 
@@ -20,11 +18,21 @@ static class Program
         }
         while (true)
         {
-            if (comHandl.oFlag == false)
+            if (!comHandl.oFlag)
             {
-                break; 
+                Console.Write("Enter var a:");
+                var a = int.Parse(Console.ReadLine());
+                Console.Write("Enter var b");
+                var b = int.Parse(Console.ReadLine());
+                Console.Write("enter the operation to be realized");
+                var o = int.Parse(Console.ReadLine());
+                var r = comHandl.ComputeOp(a, b, o);
+                Console.WriteLine($"The calculated result {r}");
             }
-            else break;
+            else
+            {
+                break;
+            }
         }
     }
 }

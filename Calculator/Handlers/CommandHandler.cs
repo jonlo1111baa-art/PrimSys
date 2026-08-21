@@ -1,12 +1,15 @@
 
+using System.Runtime.InteropServices.Swift;
+
 namespace Calculator.Handlers
 {
     public class CommandHandl
     {
 
-        public string[] comList = ["help", "math", "sin", "cos", "comp"];
-        public string[] comDesList = ["help : when given no arguments will list all commands, when given a the name of a command as argument will give a detailed description", "math : will enter math mode will not accept arguments", "sin : activates the trigometry mode, giving the sin() of the calculated result, identical to the -s flag", "cos : Will print the cos() of the calculated result, identica to the -c flag but global", "comp : activate compute mode"];
-        public string[] flagList = ["-h", "-m" , "-i" , "-s" , "-c" , "-o"];
+        public string[] comList = ["help", "math", "sin", "cos", "mem"];
+        public string[] comDesList = ["help : when given no arguments will list all commands, when given a the name of a command as argument will give a detailed description", "math : will enter math mode will not accept arguments", "sin : activates the trigometry mode, giving the sin() of the calculated result, identical to the -s flag", "cos : Will print the cos() of the calculated result, identica to the -c flag but global", "mem : will map the output aff all math operations to memory until disabled"];
+        public string[] flagList = ["-h", "-m","-s", "-c", "-o"];
+        public string[] flagDesList = ["-h : when given to a command as a flag will give the extended description, similar function to help <command>" , "-m : map the output of the inmediate operation to memory, it is not global", "s- : print the sin() of the result of the next math operation, note it is not global" , "-c : print the cos() of the following math operation , like -s it is not global" , "-o : out flag will exit the program after the next operation"];
         public bool mFlag = false;
         public bool eFlag = false;
         public bool oFlag = false;
@@ -17,17 +20,29 @@ namespace Calculator.Handlers
             eFlag = eflag;
             oFlag = oflag;
         }
-        public void HelpFunc(string[] args)
+        public void CommandHandle(CommandHandl commandHandl ,string command, string argument)
+        {
+            switch (command)
+            {
+                case "help":
+                    commandHandl.HelpFunc(argument);
+                    break;
+                case "math":
+                    Console.WriteLine("[ERROR] E2");
+                    break;
+            }
+        }
+        public void HelpFunc(string args)
         {
             if (args.Length != 1)
             {
                 switch (args)
                 {
-                    case ["help"]:
+                    case "help":
                         Console.WriteLine("Describes the complete fucntionality of a fuction when given as a argument:");
                         Console.WriteLine("");
                         Console.WriteLine("Shape: help <command> or help for complete command list");
-                        Console.WriteLine("Can also be command -h");
+                        Console.WriteLine("Can also be flag -h");
                         break;
 
                 }
@@ -42,37 +57,12 @@ namespace Calculator.Handlers
                 } 
                 Console.WriteLine();
                 Console.WriteLine("The complete flag list is as follows");
-                foreach (string i in flagList)
+                foreach (string i in flagDesList)
                 {
                     Console.WriteLine(i);
                     Console.WriteLine("");
                 }
             }
-
         }
-        public int ComputeOp(int a, int b, int o)
-        {
-            var r = 0;
-            switch (o)
-            {
-                case 0:
-                    r = a + b;
-                    break;
-                case 1:
-                    r = a - b;
-                    break;
-                case 2:
-                    r = a * b;
-                    break;
-                case 3:
-                    r = a / b;
-                    break;
-                case 4:
-                    r = a % b;
-                    break;
-            }
-            return r;
-        }
-
     }
 }

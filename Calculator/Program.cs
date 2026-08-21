@@ -7,6 +7,7 @@ static class Program
     static void Main()
     {
         CommandHandl comHandl = new(mflag: false, eflag: false, oflag: false);
+        Mathhandler mathHandl = new(newModN: 1);
         while(!comHandl.oFlag)
         {
             Console.Write(">");
@@ -16,7 +17,16 @@ static class Program
             switch (args)
             {
                 case ["help"]:
-                    comHandl.HelpFunc(args);
+                    Console.WriteLine("[ERR] E1");
+                    break;
+                case ["cos"]:
+                    Console.WriteLine("[ERR] E1");
+                    break;
+                case ["sin"]:
+                    Console.WriteLine("[ERR] E1");
+                    break;
+                case ["mem"]:
+                    Console.WriteLine("[ERR] E1");
                     break;
                 case ["math"]:
                     Console.Write("Enter var a:");
@@ -25,7 +35,7 @@ static class Program
                     var b = int.Parse(Console.ReadLine());
                     Console.Write("enter the operation to be realized: ");
                     var o = int.Parse(Console.ReadLine());
-                    var r = comHandl.ComputeOp(a, b, o);
+                    var r = mathHandl.aritmeticOps(o, a, b);
                     Console.WriteLine($"The calculated result {r}");
                     break;
                 default:

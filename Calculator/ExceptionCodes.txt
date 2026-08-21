@@ -1,2 +1,3 @@
-E1 = Yet to be implemented, it will only appear in development builds
+E1 = Yet to be implemented, it will only appear in development builds.
 E2 = No Operation implemented.
+E3 = Invalid Command Inserted.

@@ -1,7 +1,5 @@
 
-using System.Runtime.InteropServices.Swift;
-
-namespace Calculator.Handlers
+namespace Primery.Handlers
 {
     public class CommandHandl
     {
@@ -20,7 +18,7 @@ namespace Calculator.Handlers
             eFlag = eflag;
             oFlag = oflag;
         }
-        public void CommandHandle(CommandHandl commandHandl ,string command, string argument)
+        public void CommandHandle(CommandHandl commandHandl , Mathhandler mathHandl ,string command, string argument)
         {
             switch (command)
             {
@@ -28,7 +26,6 @@ namespace Calculator.Handlers
                     commandHandl.HelpFunc(argument);
                     break;
                 case "math":
-                    Console.WriteLine("[ERR] E2");
                     break;
                 case "sin":
                     Console.WriteLine("[ERR] E2");
@@ -46,7 +43,7 @@ namespace Calculator.Handlers
         }
         public void HelpFunc(string args)
         {
-            if (args.Length != 1)
+            if (args.Length > 2)
             {
                 switch (args)
                 {

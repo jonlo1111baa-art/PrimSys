@@ -26,6 +26,7 @@ namespace Primery.Handlers
                     commandHandl.HelpFunc(argument);
                     break;
                 case "math":
+                    Console.WriteLine("[ERR] E2");
                     break;
                 case "sin":
                     Console.WriteLine("[ERR] E2");

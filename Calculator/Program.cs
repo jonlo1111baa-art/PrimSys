@@ -9,7 +9,8 @@ static class Program
         CommandHandl comHandl = new(mflag: false, eflag: false, oflag: false);
         while(!comHandl.oFlag)
         {
-            var x = Console.ReadLine();
+            Console.Write(">");
+            string x = Console.ReadLine();
             var args = x.Split();
 
             switch (args)

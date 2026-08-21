@@ -1,0 +1,4 @@
+1.Implement arithmetic operations and finish the math module
+2.finish the documentation.
+3.Make the system modular.
+4.Finish the Math command

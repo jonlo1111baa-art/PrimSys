@@ -1,4 +1,4 @@
-### Welcome to PrimSys!
+#### Welcome to PrimSys!
 
 PrimSys is a passion project of mine, written primarily with **JSON** and **C#**, with a small amount of **C++**.
 

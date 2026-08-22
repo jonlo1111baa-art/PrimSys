@@ -12,9 +12,11 @@
 
     #### 3.2.Handlers
 
-    #### 3.3.SubProcceses
+    #### 3.3.Modules
 
-    #### 3.4.Command handling
+    #### 3.4.SubProcceses
+
+    #### 3.5.Command handling
 
 ### 4.Implementation
 
@@ -30,4 +32,4 @@
 
 ### 6.Thank You note
 
-[PrimSys Repo]()
+[PrimSys Repo](https://github.com/jonlo1111baa-art/PrimSys)

@@ -2,7 +2,7 @@
 
 namespace Primery;
 
-static class Program
+static class UserProcess
 {
     static void Main()
     {

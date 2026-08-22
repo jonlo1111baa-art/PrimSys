@@ -1,11 +1,12 @@
 
+using Primery.Commons;
 namespace Primery.Modules;
 
 static class MathModule //Yet to be implemented, make sure to overhaul MathHandler to handle MathModule
 {
-    public static double MMArith(int op, int a, int b)
+    public static double MMArith(int op, double a, double b)
     {
-        double r = 3.1343453123124452;
+        double r = 0;
         switch (op)
         {
             case 0:
@@ -21,7 +22,7 @@ static class MathModule //Yet to be implemented, make sure to overhaul MathHandl
                 r = a / b;
                 break;
             default:
-                break;
+                return ECodes.ExceptionNoOp.Code; //No OP error code
 
         }
         return r;
@@ -35,7 +36,7 @@ static class MathModule //Yet to be implemented, make sure to overhaul MathHandl
     public static double MMCosFunc(double a)
     {
         double ar = a * (3.14 / 180);
-        double r = 1 / ar; //Yet to implement sin(x) (Im not smart enough yet)
+        double r = 1 / ar; //Yet to implement cos(x) (Im not smart enough yet)
         return r;
     }
     public static double MMPower(int p, double a)

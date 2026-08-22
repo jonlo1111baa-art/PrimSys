@@ -2,3 +2,4 @@ E1 = Yet to be implemented, it will only appear in development builds.
 E2 = No Operation implemented.
 E3 = Invalid Command Inserted.
 E4 = Too many Arguments!
+E5 = Unexpected behavior of code.

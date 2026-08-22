@@ -1,4 +1,6 @@
 
+using Primery.Commons;
+
 namespace Primery.Handlers;
 
 public class Mathhandler
@@ -37,7 +39,7 @@ public class Mathhandler
                         Console.WriteLine($"{a} / {b} = {mathHandler.aritmeticOpsHandle(op, a, b)}");
                         break;
                     default:
-                        Console.WriteLine("[ERR] E3");
+                        Console.WriteLine($"[ERR] E{ECodes.ExceptionNoOp.Code} : {ECodes.ExceptionNoOp.Message}");
                         break;
                 }
                 break;

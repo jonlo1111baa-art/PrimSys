@@ -3,8 +3,6 @@ namespace Primery.Handlers;
 
 public class Mathhandler
 {
-    public bool sFlag = false;
-    public bool cFlag = false;
     public bool mFlag = false;
     public int modN = 1;
 
@@ -37,6 +35,9 @@ public class Mathhandler
                         break;
                     case 3:
                         Console.WriteLine($"{a} / {b} = {mathHandler.aritmeticOpsHandle(op, a, b)}");
+                        break;
+                    default:
+                        Console.WriteLine("[ERR] E3");
                         break;
                 }
                 break;

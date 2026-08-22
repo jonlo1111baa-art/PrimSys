@@ -3,21 +3,21 @@ using Primery.Commons;
 
 namespace Primery.Handlers;
 
-public class Mathhandler
+public class MathHandler
 {
     public bool mFlag = false;
     public int modN = 1;
 
-    public Mathhandler(int newModN)
+    public MathHandler(int newModN)
     {
         modN = newModN;
     }
 
-    public void commandHandle(string argument, Mathhandler mathHandler)
+    public void commandHandle(string argument, MathHandler mathHandler)
     {
         switch (argument)
         {
-            case "":
+            case "-a":
                 Console.Write("Enter a: ");
                 var a = double.Parse(Console.ReadLine());
                 Console.Write("Enter b: ");
@@ -27,7 +27,7 @@ public class Mathhandler
                 switch (op)
                 {
                     case 0:
-                        Console.WriteLine($"T{a} + {b} = {mathHandler.aritmeticOpsHandle(op, a, b)}");
+                        Console.WriteLine($"{a} + {b} = {mathHandler.aritmeticOpsHandle(op, a, b)}");
                         break;
                     case 1:
                         Console.WriteLine($"{a} - {b} = {mathHandler.aritmeticOpsHandle(op, a, b)}");

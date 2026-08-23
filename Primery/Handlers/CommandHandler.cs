@@ -1,4 +1,6 @@
 
+using Primery.Commons;
+
 namespace Primery.Handlers
 {
     public class CommandHandler
@@ -26,13 +28,13 @@ namespace Primery.Handlers
                     commandHandl.HelpFunc(argument);
                     break;
                 case "math":
-                    mathHandl.commandHandle(argument , mathHandl);
+                    mathHandl.commandHandle(argument);
                     break;
                 case "mem":
-                    Console.WriteLine("[ERR] E2");
+                    Console.WriteLine($"[ERR] {ECodes.ExceptionNoOp.Code} : {ECodes.ExceptionNoOp.Message}");
                     break;
                 default:
-                    Console.WriteLine("[ERR] E3");
+                    Console.WriteLine($"[ERR] {ECodes.ExceptionNoOp.Code} : {ECodes.ExceptionNoOp.Message}");
                     break;
             }
         }

@@ -29,17 +29,21 @@ public class MathHandler
                 Console.WriteLine($"{a}{MathModule.ReturnOp(op)}{b}  = {r}");
                 break;
             case "sin":
-                Console.WriteLine("Enter the angle in degrees: ");
+                Console.Write("Enter the angle in degrees: ");
                 var e = double.Parse(Console.ReadLine());
                 var rs = MathModule.MMSinFunc(e);
-                Console.WriteLine("[ERR] E2");
+                Console.WriteLine($"[ERR] {ECodes.ExceptionNoOp.Code} : {ECodes.ExceptionNoOp.Message}");
                 break;
             case "cos":
-                Console.WriteLine("Enter the angle in degrees: ");
+                Console.Write("Enter the angle in degrees: ");
                 var f = double.Parse(Console.ReadLine());
                 var re = MathModule.MMCosFunc(f);
                 Console.WriteLine($"[ERR] {ECodes.ExceptionNoOp.Code} : {ECodes.ExceptionNoOp.Message}");
                 break;
+            default:
+                Console.WriteLine($"[ERR] {ECodes.ExceptionNoInvalidCommand.Code} : {ECodes.ExceptionNoInvalidCommand.Message}");
+                break;
+
         }
     }
 }

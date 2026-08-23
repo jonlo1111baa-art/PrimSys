@@ -4,6 +4,28 @@ namespace Primery.Modules;
 
 static class MathModule //Yet to be implemented, make sure to overhaul MathHandler to handle MathModule
 {
+    public struct Optypes
+    {
+        public static string Op0 = " + ";
+        public static string Op1 = " - ";
+        public static string Op2 = " * ";
+        public static string Op3 = " / ";
+    }
+    public static string ReturnOp(int op)
+    {
+        switch (op)
+        {
+            case 0:
+                return Optypes.Op0;
+            case 1:
+                return Optypes.Op1;
+            case 2:
+                return Optypes.Op2;
+            case 3:
+                return Optypes.Op3;
+        }
+        return string.Empty;
+    }
     public static double MMArith(int op, double a, double b)
     {
         double r = 0;

@@ -16,7 +16,7 @@
 
     #### 3.4.SubProcceses
 
-    #### 3.5.Command handling
+    #### 3.5.Primery Command Handling
 
     #### 3.6.Commons
 

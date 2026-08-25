@@ -19,7 +19,12 @@ static class UserProcess
             string argument = "";
             try
             {
-                if (args.Length < 1) { Console.WriteLine($"E{ECodes.ExceptionInvalidArgs.Code} : {ECodes.ExceptionInvalidArgs.Message}"); break; }
+                if (args.Length < 1) 
+                {
+                    args[1] = "";
+                    argument = args[1]; 
+                    commandHandler.CommandHandle(commandHandler, mathHandler, command, argument);
+                }
                 else
                 {
                     argument = args[1];

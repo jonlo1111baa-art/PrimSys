@@ -7,35 +7,24 @@ static class UserProcess
 {
     static void Main()
     {
-        MainHandler commandHandler = new(mflag: false, eflag: false, oflag: false);
+        MainHandler mainHandler = new(mflag: false, eflag: false, oflag: false);
         MathHandler mathHandler = new(newModN: 1);
-        while (!commandHandler.oFlag)
+        while (!mainHandler.oFlag)
         {
             Console.Write(">");
             string x = Console.ReadLine();
             var args = x.Split(' ');
-        
             var command = args[0];
             string argument = "";
-            try
+            if (args.Length < 2)
             {
-                if (args.Length < 1) 
-                {
-                    args[1] = "";
-                    argument = args[1]; 
-                    commandHandler.CommandHandle(commandHandler, mathHandler, command, argument);
-                }
-                else
-                {
-                    argument = args[1];
-                    commandHandler.CommandHandle(commandHandler, mathHandler, command, argument);
-                }
+                mainHandler.CommandHandle(mainHandler, mathHandler, command, argument);
             }
-            catch
+            else
             {
-                Console.WriteLine($"E{ECodes.ExceptionInvalidArgs.Code} : {ECodes.ExceptionInvalidArgs.Message}");
+                argument = args[1];
+                mainHandler.CommandHandle(mainHandler, mathHandler, command, argument);
             }
-            
-            }
+        }
     }
 }

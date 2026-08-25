@@ -40,20 +40,7 @@ namespace Primery.Handlers
         }
         public void HelpFunc(string args)
         {
-            if (args.Length > 2)
-            {
-                switch (args)
-                {
-                    case "help":
-                        Console.WriteLine("Describes the complete fucntionality of a fuction when given as a argument:");
-                        Console.WriteLine("");
-                        Console.WriteLine("Shape: help <command> or help for complete command list");
-                        Console.WriteLine("Can also be flag -h");
-                        break;
-
-                }
-            }
-            else
+            if (args == "")
             {
                 Console.WriteLine("The complete command list is as follows");
                 foreach (string i in comDesList)
@@ -67,6 +54,32 @@ namespace Primery.Handlers
                 {
                     Console.WriteLine(i);
                     Console.WriteLine("");
+                }
+            }
+            else
+            {
+                switch (args)
+                {
+                    case "help":
+                        Console.WriteLine("Describes the complete fucntionality of a fuction when given as a argument:");
+                        Console.WriteLine("");
+                        Console.WriteLine("Shape: help <command> or help for complete command list");
+                        Console.WriteLine("Can also be flag -h");
+                        break;
+                    case "math":
+                        Console.WriteLine("Direct Interface with the Math module and its operations");
+                        Console.WriteLine("");
+                        Console.WriteLine("Shape : math <selected operation or flag>");
+                        Console.WriteLine("Posible args:");
+                        Console.WriteLine("-a : for aritmetic operations");
+                        Console.WriteLine("sin : for sin(x) it will ask for x (NOTE NOT IMPLEMENTED!)");
+                        Console.WriteLine("cos : for cos(x) it will ask for x (NOTE NOT IMPLEMENTED!)");
+                        Console.WriteLine("mem : Save the next operation in memory (NOTE NOT IMPLEMENTED)");
+                        break;
+                    default:
+                        Console.WriteLine($"{ECodes.ExceptionInvalidArgs.Code} : {ECodes.ExceptionInvalidArgs.Message}");
+                        break;
+
                 }
             }
         }

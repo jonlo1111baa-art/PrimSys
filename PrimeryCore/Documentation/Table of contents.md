@@ -8,17 +8,19 @@
 
 ### 3.Arquitecture
 
-    #### 3.1.Main execution flow
+    #### 3.1.PrimSys Sections
 
-    #### 3.2.Handlers
+    #### 3.2.Main execution flow
 
-    #### 3.3.Modules
+    #### 3.3.Handlers
 
-    #### 3.4.SubProcceses
+    #### 3.4.Modules
 
-    #### 3.5.Primery Command Handling
+    #### 3.5.SubProcceses
 
-    #### 3.6.Commons
+    #### 3.6.Primery Command Handling
+
+    #### 3.7.Commons
 
 ### 4.Implementation
 
@@ -29,6 +31,12 @@
     #### 4.3.Subprocceses Organization
 
     #### 4.4.Primery Procceses Organization
+
+    #### 4.5.Commons
+
+    #### 4.6.Contribution Guide
+
+
 
 ### 5.Compilation Guide
 

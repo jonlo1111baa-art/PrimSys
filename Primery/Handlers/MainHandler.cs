@@ -3,7 +3,7 @@ using Primery.Commons;
 
 namespace Primery.Handlers
 {
-    public class CommandHandler
+    public class MainHandler
     {
 
         public string[] comList = ["help", "math", "sin", "cos", "mem"];
@@ -14,13 +14,13 @@ namespace Primery.Handlers
         public bool eFlag = false;
         public bool oFlag = false;
 
-        public CommandHandler(bool mflag, bool eflag, bool oflag)
+        public MainHandler(bool mflag, bool eflag, bool oflag)
         {
             mFlag = mflag;
             eFlag = eflag;
             oFlag = oflag;
         }
-        public void CommandHandle(CommandHandler commandHandl , MathHandler mathHandl ,string command, string argument)
+        public void CommandHandle(MainHandler commandHandl , MathHandler mathHandl ,string command, string argument)
         {
             switch (command)
             {

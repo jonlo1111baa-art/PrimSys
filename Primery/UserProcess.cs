@@ -7,7 +7,7 @@ static class UserProcess
 {
     static void Main()
     {
-        CommandHandler commandHandler = new(mflag: false, eflag: false, oflag: false);
+        MainHandler commandHandler = new(mflag: false, eflag: false, oflag: false);
         MathHandler mathHandler = new(newModN: 1);
         while (!commandHandler.oFlag)
         {

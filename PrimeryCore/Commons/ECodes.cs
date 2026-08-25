@@ -1,4 +1,4 @@
-namespace Primery.Commons;
+namespace PrimeryCore.Commons;
 
 public static class ECodes
 {

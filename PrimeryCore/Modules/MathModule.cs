@@ -1,6 +1,6 @@
 
-using Primery.Commons;
-namespace Primery.Modules;
+using PrimeryCore.Commons;
+namespace PrimeryCore.Modules;
 
 static class MathModule //Yet to be implemented, make sure to overhaul MathHandler to handle MathModule
 {

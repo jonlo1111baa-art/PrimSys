@@ -1,7 +1,7 @@
-﻿using Primery.Commons;
-using Primery.Handlers;
+﻿using PrimeryCore.Commons;
+using PrimeryCore.Handlers;
 
-namespace Primery;
+namespace PrimeryCore;
 
 static class UserProcess
 {

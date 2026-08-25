@@ -1,7 +1,7 @@
 
-using Primery.Commons;
+using PrimeryCore.Commons;
 
-namespace Primery.Handlers
+namespace PrimeryCore.Handlers
 {
     public class MainHandler
     {

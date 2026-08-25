@@ -1,8 +1,8 @@
 
-using Primery.Commons;
-using Primery.Modules;
+using PrimeryCore.Commons;
+using PrimeryCore.Modules;
 
-namespace Primery.Handlers;
+namespace PrimeryCore.Handlers;
 
 public class MathHandler
 {

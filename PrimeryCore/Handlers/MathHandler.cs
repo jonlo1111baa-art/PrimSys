@@ -41,7 +41,7 @@ public class MathHandler
                 Console.WriteLine($"[ERR] {ECodes.ExceptionNoOp.Code} : {ECodes.ExceptionNoOp.Message}");
                 break;
             default:
-                Console.WriteLine($"[ERR] {ECodes.ExceptionNoInvalidCommand.Code} : {ECodes.ExceptionNoInvalidCommand.Message}");
+                Console.WriteLine($"[ERR] {ECodes.ExceptionInvalidCommand.Code} : {ECodes.ExceptionInvalidCommand.Message}");
                 break;
 
         }

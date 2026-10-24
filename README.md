@@ -1,6 +1,6 @@
 ## Prim-sys
 
-modular and versitily command line utility.
+modular and versatility command line utility.
 
 consult the docs included
 
